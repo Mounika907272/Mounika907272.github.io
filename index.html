@@ -4,30 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MBSP2.0</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      height: 32px;
+      margin-right: 10px;
+    }
+
+    .navbar-left .site-title {
+      font-weight: bold;
+      margin-right: 30px;
+    }
+
+    .nav-links a {
+      color: #1e90ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .theme-toggle {
+      margin-right: 20px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #2a2a2a;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      color: white;
+      margin-left: 5px;
+      outline: none;
+    }
+  </style>
 </head>
 <body>
-  <!-- Main Container -->
-  <div class="container">
-    <!-- Header -->
-    <header>
-      <h1>MBSP2.0 Demo Page</h1>
-    </header>
-    <!-- Main Container -->
-  <div class="container">
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-      <h2>Sections</h2>
-      <ul>
-        <li><a href="#drupal">Drupal Back-end</a></li>
-        <li><a href="#technical">MBSP2 Technical documentation</a></li>
-        <li><a href="#react">React Front-end</a></li>
-        <li><a href="#opm">OPM</a></li>
-      </ul>
-    </aside>
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="logo.png" alt="Logo" />
+      <span class="site-title">MBSP2.0</span>
+      <div class="nav-links">
+        <a href="#">Documentation</a>
+        <a href="#">Roadmap</a>
+        <a href="#">News</a>
+        <a href="#">Release Notes</a>
+        <a href="#">FAQ</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="theme-toggle">☀️</div>
+      <div class="search-box">
+        🔍 <input type="text" placeholder="Search" />
+      </div>
+    </div>
   </div>
+
 </body>
 </html>
+
 
       
    
