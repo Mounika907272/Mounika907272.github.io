@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBSP2.0</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-left img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .navbar-left .site-title {
+      font-weight: bold;
+      margin-right: 20px;
+      font-size: 18px;
+    }
+    .nav-links a {
+      color: #1e90ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+    .theme-toggle {
+      font-size: 18px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .search-box {
+      background: #2a2a2a;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+    }
+    .search-box input {
+      background: transparent;
+      border: none;
+      color: white;
+      margin-left: 5px;
+      outline: none;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 250px;
+      background: #f8f9fa;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .menu-section {
+      margin-bottom: 10px;
+    }
+    .menu-title {
+      font-weight: bold;
+      cursor: pointer;
+      background: #e9ecef;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .menu-items {
+      margin-top: 5px;
+      padding-left: 15px;
+      display: none;
+    }
+    .menu-item {
+      padding: 8px 0;
+      cursor: pointer;
+    }
+    .content {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .content h1 {
+      margin-bottom: 20px;
+    }
+    .content p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .edit-link {
+      color: #1e90ff;
+      font-size: 14px;
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="images/logo.png" alt="Logo">
+      <div class="site-title">MBSP2.0</div>
+      <div class="nav-links">
+        <a href="#">Documentation</a>
+        <a href="#">Roadmap</a>
+        <a href="#">News</a>
+        <a href="#">Release Notes</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="theme-toggle">☀️</div>
+      <div class="search-box">
+        🔍 <input type="text" placeholder="Search">
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <div class="sidebar">
+      <div class="menu-section">
+        <div class="menu-title" onclick="toggleMenu(this)">MBSP2.0</div>
+        <div class="menu-items">
+          <div class="menu-title" onclick="toggleMenu(this)">General</div>
+          <div class="menu-items">
+            <div class="menu-item">Item 1</div>
+            <div class="menu-item">Item 2</div>
+          </div>
+          <div class="menu-title" onclick="toggleMenu(this)">Technical Guide</div>
+          <div class="menu-items">
+            <div class="menu-item">Item 3</div>
+            <div class="menu-item">Item 4</div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-title">FAQ</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>MBSP2.0</h1>
+      <p>The MBSP2.0 consists of two areas:</p>
+      <ul>
+        <li>General Topics: Basic topics are covered, which are not depending on the underlying infrastructure and networking.</li>
+        <li>Technical Guide: Platform topics for the CaaS platform, with different requests and processes on the technical infrastructure.</li>
+      </ul>
+
+      <h2>General</h2>
+      <p>13 items</p>
+
+      <h2>Technical Guide</h2>
+      <p>24 items</p>
+
+      <a class="edit-link" href="#">✏️ Edit this page</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu(element) {
+      const next = element.nextElementSibling;
+      if (next && next.classList.contains('menu-items')) {
+        next.style.display = next.style.display === 'block' ? 'none' : 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
 
